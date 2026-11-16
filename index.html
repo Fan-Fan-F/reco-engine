@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>reco-engine · 商品推荐引擎</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <h1>🎯 商品推荐引擎 <span class="sub">Item-CF 协同过滤 · 可解释推荐</span></h1>
+</header>
+
+<main class="layout">
+  <aside class="panel">
+    <h2>选择用户</h2>
+    <div id="user-list" class="user-list"></div>
+
+    <h2>其行为记录</h2>
+    <div id="user-history" class="history"></div>
+
+    <div class="legend">
+      <span class="tag view">浏览 ×1</span>
+      <span class="tag cart">加购 ×2</span>
+      <span class="tag fav">收藏 ×3</span>
+      <span class="tag buy">购买 ×5</span>
+    </div>
+  </aside>
+
+  <section class="content">
+    <div class="block">
+      <h2>为 TA 推荐 <span id="reco-user" class="hl"></span></h2>
+      <div id="reco-grid" class="card-grid"></div>
+    </div>
+
+    <div class="block">
+      <h2>看了又看（相似商品）</h2>
+      <div class="sim-picker">
+        <select id="sim-select"></select>
+      </div>
+      <div id="sim-grid" class="card-grid"></div>
+    </div>
+
+    <div class="block">
+      <h2>全站热门（冷启动兜底）</h2>
+      <div id="hot-grid" class="card-grid"></div>
+    </div>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
